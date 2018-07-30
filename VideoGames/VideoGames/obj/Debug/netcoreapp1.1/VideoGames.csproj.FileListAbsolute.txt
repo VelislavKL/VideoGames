@@ -1,0 +1,11 @@
+C:\Users\User\Downloads\VideoGames\VideoGames\obj\Debug\netcoreapp1.1\VideoGames.csprojAssemblyReference.cache
+C:\Users\User\Downloads\VideoGames\VideoGames\obj\Debug\netcoreapp1.1\VideoGames.csproj.CoreCompileInputs.cache
+C:\Users\User\Downloads\VideoGames\VideoGames\obj\Debug\netcoreapp1.1\VideoGames.AssemblyInfoInputs.cache
+C:\Users\User\Downloads\VideoGames\VideoGames\obj\Debug\netcoreapp1.1\VideoGames.AssemblyInfo.cs
+C:\Users\User\Downloads\VideoGames\VideoGames\bin\Debug\netcoreapp1.1\VideoGames.deps.json
+C:\Users\User\Downloads\VideoGames\VideoGames\bin\Debug\netcoreapp1.1\VideoGames.runtimeconfig.json
+C:\Users\User\Downloads\VideoGames\VideoGames\bin\Debug\netcoreapp1.1\VideoGames.runtimeconfig.dev.json
+C:\Users\User\Downloads\VideoGames\VideoGames\bin\Debug\netcoreapp1.1\VideoGames.dll
+C:\Users\User\Downloads\VideoGames\VideoGames\bin\Debug\netcoreapp1.1\VideoGames.pdb
+C:\Users\User\Downloads\VideoGames\VideoGames\obj\Debug\netcoreapp1.1\VideoGames.dll
+C:\Users\User\Downloads\VideoGames\VideoGames\obj\Debug\netcoreapp1.1\VideoGames.pdb

@@ -1,0 +1,124 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT Games (Name,Country?,Publisher,Website,Description?,License?,
+                 Languages?,ReleaseDate,Price,Media?,GameSize,Platform,
+                 Genre?,Players?,Type?,ContentRating?,RequirementsList?)>
+<!ATTLIST Games
+  xmlns CDATA #FIXED ''
+  CatalogRating CDATA #REQUIRED
+  IsAvailable NMTOKEN #REQUIRED>
+
+<!ELEMENT Name (#PCDATA)>
+<!ATTLIST Name
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Country (#PCDATA)>
+<!ATTLIST Country
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Publisher (#PCDATA)>
+<!ATTLIST Publisher
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Website (#PCDATA)>
+<!ATTLIST Website
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Description (#PCDATA)>
+<!ATTLIST Description
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT License (#PCDATA)>
+<!ATTLIST License
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Languages (#PCDATA)>
+<!ATTLIST Languages
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT ReleaseDate (#PCDATA)>
+<!ATTLIST ReleaseDate
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Price (#PCDATA)>
+<!ATTLIST Price
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Media (#PCDATA)>
+<!ATTLIST Media
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT GameSize (#PCDATA)>
+<!ATTLIST GameSize
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Platform (#PCDATA)>
+<!ATTLIST Platform
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Genre (#PCDATA)>
+<!ATTLIST Genre
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Players (#PCDATA)>
+<!ATTLIST Players
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Type (#PCDATA)>
+<!ATTLIST Type
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT ContentRating (AgeLevel?,System?)>
+<!ATTLIST ContentRating
+  xmlns CDATA #FIXED ''
+  GameId CDATA #REQUIRED>
+
+<!ELEMENT RequirementsList (Requirements*)+>
+<!ATTLIST RequirementsList
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT AgeLevel (#PCDATA)>
+<!ATTLIST AgeLevel
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT System (#PCDATA)>
+<!ATTLIST System
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Requirements (OperatingSystem?,Cpu?,Ram?,Graphics?,Storage?,
+                        DirectX?,InternetNeed?,RequirementsType?)>
+<!ATTLIST Requirements
+  xmlns CDATA #FIXED ''
+  GameId CDATA #REQUIRED>
+
+<!ELEMENT OperatingSystem (#PCDATA)>
+<!ATTLIST OperatingSystem
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Cpu (#PCDATA)>
+<!ATTLIST Cpu
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Ram (#PCDATA)>
+<!ATTLIST Ram
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Graphics (#PCDATA)>
+<!ATTLIST Graphics
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Storage (#PCDATA)>
+<!ATTLIST Storage
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT DirectX (#PCDATA)>
+<!ATTLIST DirectX
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT InternetNeed (#PCDATA)>
+<!ATTLIST InternetNeed
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT RequirementsType (#PCDATA)>
+<!ATTLIST RequirementsType
+  xmlns CDATA #FIXED ''>

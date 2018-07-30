@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Games SYSTEM "VideoGamesDTD.dtd">
+<Games CatalogRating="4.8" IsAvailable="false">
+  <Name>Counter-Strike: Global Offensive</Name>
+  <Publisher>Valve</Publisher>
+  <Website>www.csgo.com</Website>
+  <Description>Counter-Strike: Global Offensive (CS:GO) е следващата стъпка в еволюцията на класическият отборен геймплей, който се превърна в световна сензация преди 12 години с дебюта на Counter Strike. CS:GO предлага обновени класически карти (dust, aztec и др.), но включва и нови геймплей режими, оръжия и персонажи.
+С появата си през август 1999 модификацията на Half-Life e изненада за цялата гейминг индустрия и бързо се превръща в най-играното онлайн заглавие. До ден днешен Counter-Strike продължава да е сред най-популярните игри, включително на турнирно ниво, а поредицата е продала над 25 милиона копия.
+CS: GO продължава легендата.</Description>
+  <ReleaseDate>2012-07-07T00:00:00</ReleaseDate>
+  <Price>29.95</Price>
+  <GameSize>15.65 GB</GameSize>
+  <Platform>PC</Platform>
+  <Genre>Шутер</Genre>
+  <ContentRating GameId="2052">
+    <AgeLevel>3</AgeLevel>
+    <System>PEGI</System>
+  </ContentRating>
+  <RequirementsList>
+    <Requirements GameId="2052">
+      <OperatingSystem>Windows 7/Vista/XP/Windows 8</OperatingSystem>
+      <Cpu>Intel Core 2 Duo E6600 / AMD Phenom™ X3 8750</Cpu>
+      <Ram>1GB XP / 2GB Vista, Windows 7</Ram>
+      <Graphics>256 MB с Pixel Shader 3.0</Graphics>
+      <Storage>20 GB</Storage>
+      <DirectX>11</DirectX>
+      <InternetNeed>true</InternetNeed>
+      <RequirementsType>минимални</RequirementsType>
+    </Requirements>
+  </RequirementsList>
+</Games>

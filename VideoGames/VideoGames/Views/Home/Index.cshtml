@@ -1,0 +1,16 @@
+﻿@using (Html.BeginForm())
+{
+<h3>Игри</h3>
+<p>
+    Търсене по име: @Html.TextBox("SearchName")
+</p>
+<br />
+}
+
+<ol type="1">
+    @foreach (var item in ViewBag.GamesList)
+    {
+        <li><a asp-action="GameInfo" asp-route-id="@item.GameId">@item.Name</a></li>
+    }
+</ol>
+

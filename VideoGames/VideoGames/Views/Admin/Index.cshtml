@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Администрация";
+}
+
+<h3>Администрация</h3>
+
+<br />
+
+<div class="form-group">
+    <form asp-action="Import" method="post">
+        <input type="submit" value="Добави игри от XML в базата данни" class="btn btn-default">
+    </form>
+</div>
+
+<div class="form-group">
+    <a asp-controller="Admin" asp-action="InsertData">
+    <input type="submit" value="Запиши в базата данни и в XML" class="btn btn-default">
+    </a>
+</div>
+
+<div class="form-group">
+    <a asp-controller="Admin" asp-action="DeleteData">
+        <input type="submit" value="Изтрий всички записи от базата данни" class="btn btn-default">
+    </a>
+</div>
+
+
+

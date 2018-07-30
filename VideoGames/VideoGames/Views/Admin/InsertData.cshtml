@@ -1,0 +1,165 @@
+﻿@model Games
+
+@{
+    ViewData["Title"] = "Добави игра";
+}
+
+<h3>Добави игра</h3>
+
+
+<form asp-action="InsertData" method="post">
+    <p><small>Задължителните полета са отбелязани със звезда (<abbr title="Задължително поле">*</abbr>).</small></p>
+
+    <div class="form-group required">
+        <label asp-for="@Model.Name" class="control-label"></label>
+        <input asp-for="@Model.Name" class="form-control" new { autocomplete="off" }>
+        <span asp-validation-for="@Model.Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group required">
+        <label asp-for="@Model.IsAvailable" class="control-label"></label>
+        <input asp-for="@Model.IsAvailable" type="checkbox" value="true" checked />
+    </div>
+
+    <div class="form-group required">
+        <label asp-for="@Model.CatalogRating" class="control-label"></label>
+        <input asp-for="@Model.CatalogRating" class="form-control" new { autocomplete="off" }>
+        <span asp-validation-for="@Model.CatalogRating" class="text-danger"></span>
+    </div>
+
+    <div class="form-group required">
+        <label asp-for="@Model.Price" class="control-label"></label>
+        <input asp-for="@Model.Price" class="form-control" new { autocomplete="off" }>
+        <span asp-validation-for="@Model.Price" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="@Model.Description" class="control-label"></label>
+        <textarea asp-for="@Model.Description" class="form-control" new { autocomplete="off" }></textarea>
+        <span asp-validation-for="@Model.Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group required">
+        <label asp-for="@Model.Platform" class="control-label"></label>
+        <input asp-for="@Model.Platform" class="form-control" new { autocomplete="off" }>
+        <span asp-validation-for="@Model.Platform" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="@Model.Genre" class="control-label"></label>
+        <input asp-for="@Model.Genre" class="form-control" new { autocomplete="off" }>
+        <span asp-validation-for="@Model.Genre" class="text-danger"></span>
+    </div>
+
+    <div class="form-group required">
+        <label asp-for="@Model.ReleaseDate" class="control-label"></label>
+        <input asp-for="@Model.ReleaseDate" class="form-control" new { autocomplete="off" }>
+        <span asp-validation-for="@Model.ReleaseDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group required">
+        <label asp-for="@Model.Publisher" class="control-label"></label>
+        <input asp-for="@Model.Publisher" class="form-control" new { autocomplete="off" }>
+        <span asp-validation-for="@Model.Publisher" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="@Model.Country" class="control-label"></label>
+        <input asp-for="@Model.Country" class="form-control" new { autocomplete="off" }>
+        <span asp-validation-for="@Model.Country" class="text-danger"></span>
+    </div>
+
+    <div class="form-group required">
+        <label asp-for="@Model.GameSize" class="control-label"></label>
+        <input asp-for="@Model.GameSize" class="form-control" new { autocomplete="off" }>
+        <span asp-validation-for="@Model.GameSize" class="text-danger"></span>
+    </div>
+
+    <div class="form-group required">
+        <label asp-for="@Model.Website" class="control-label"></label>
+        <input asp-for="@Model.Website" class="form-control" new { autocomplete="off" }>
+        <span asp-validation-for="@Model.Website" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" name="addRequirements" value="Добави изисквания (за компютър)" class="btn btn-info cancel">
+    </div>
+
+    @for (int i = 0; i < @Model?.Requirements?.Count; i++)
+    {
+    <fieldset>
+        <legend>Изисквания</legend>
+        <div class="form-group">
+            <label asp-for="@Model.Requirements[i].RequirementsType" class="control-label"></label>
+            <input asp-for="@Model.Requirements[i].RequirementsType" class="form-control" new { autocomplete="off" }>
+            <span asp-validation-for="@Model.Requirements[i].RequirementsType" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Requirements[i].OperatingSystem" class="control-label"></label>
+            <input asp-for="@Model.Requirements[i].OperatingSystem" class="form-control" new { autocomplete="off" }>
+            <span asp-validation-for="@Model.Requirements[i].OperatingSystem" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Requirements[i].Ram" class="control-label"></label>
+            <input asp-for="@Model.Requirements[i].Ram" class="form-control" new { autocomplete="off" }>
+            <span asp-validation-for="@Model.Requirements[i].Ram" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Requirements[i].Cpu" class="control-label"></label>
+            <input asp-for="@Model.Requirements[i].Cpu" class="form-control" new { autocomplete="off" }>
+            <span asp-validation-for="@Model.Requirements[i].Cpu" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Requirements[i].Graphics" class="control-label"></label>
+            <input asp-for="@Model.Requirements[i].Graphics" class="form-control" new { autocomplete="off" }>
+            <span asp-validation-for="@Model.Requirements[i].Graphics" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Requirements[i].DirectX" class="control-label"></label>
+            <input asp-for="@Model.Requirements[i].DirectX" class="form-control" new { autocomplete="off" }>
+            <span asp-validation-for="@Model.Requirements[i].DirectX" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Requirements[i].Storage" class="control-label"></label>
+            <input asp-for="@Model.Requirements[i].Storage" class="form-control" new { autocomplete="off" }>
+            <span asp-validation-for="@Model.Requirements[i].Storage" class="text-danger"></span>
+        </div>
+        <div class="form-group required">
+            <label asp-for="@Model.Requirements[i].InternetNeed" class="control-label"></label>
+            <br />
+            <input asp-for="@Model.Requirements[i].InternetNeed" type="radio" value="true" /> Да
+            <br />
+            <input asp-for="@Model.Requirements[i].InternetNeed" type="radio" value="false" /> Не
+        </div>
+    </fieldset>
+    }
+
+    <div class="form-group">
+        <input type="submit" name="addContentRating" value="Добави възрастов рейтинг" class="btn btn-info cancel">
+    </div>
+
+    @if (@ViewBag.successMessage == "Success")
+    {
+        <fieldset>
+            <legend>Възрастов рейтинг</legend>
+            <div class="form-group">
+                <label asp-for="@Model.ContentRating.System" class="control-label"></label>
+                <input asp-for="@Model.ContentRating.System" class="form-control" new { autocomplete="off" }>
+                <span asp-validation-for="@Model.ContentRating.System" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.ContentRating.AgeLevel" class="control-label"></label>
+                <input asp-for="@Model.ContentRating.AgeLevel" class="form-control">
+                <span asp-validation-for="@Model.ContentRating.AgeLevel" class="text-danger"></span>
+            </div>
+        </fieldset>
+    }
+
+    <div class="form-group">
+        <input type="submit" value="Добави играта в базата данни и в XML" class="btn btn-default">
+    </div>
+
+    @section Scripts {
+        @Html.Partial("_ValidationScriptsPartial")
+    }
+</form>

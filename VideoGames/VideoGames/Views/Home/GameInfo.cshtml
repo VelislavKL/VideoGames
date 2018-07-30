@@ -1,0 +1,89 @@
+﻿<br />
+
+@{string available = "налична"; string colour;}
+
+<h3 style="display:inline">@ViewData["Title"] @ViewBag.Game.Name</h3>
+
+&nbsp
+@if (@ViewBag.Game.IsAvailable == true)
+{
+    colour = "green";
+    <h4 style="display:inline; line-through; color:@colour"><b>(@available)</b></h4>
+}
+else
+{
+    colour = "red";
+    <h4 style="display:inline; text-decoration: line-through; color:@colour"><b>(@available)</b></h4>
+}
+
+<h5 style="color:#8c8c8c;"><b>Рейтинг:</b> @ViewBag.Game.CatalogRating</h5>
+
+<p><b>Цена:</b> @ViewBag.Game.Price лв.</p>
+
+@if (@ViewBag.Game.Description != null)
+{
+    <p><b>Описание:</b> @ViewBag.Game.Description</p>
+}
+else
+{
+    Console.WriteLine("Няма.");
+}
+
+<p><b>Производител:</b> @ViewBag.Game.Publisher</p>
+
+@if (@ViewBag.Game.Country != null)
+{
+    <p><b>Страна:</b> @ViewBag.Game.Country</p>
+}
+
+<p><b>Платформа:</b> @ViewBag.Game.Platform</p>
+
+@if (@ViewBag.Game.Genre != null)
+{
+    <p><b>Жанр:</b> @ViewBag.Game.Genre</p>
+}
+
+<p><b>Размер:</b> @ViewBag.Game.GameSize</p>
+
+@if (@ViewBag.Game.ContentRating != null)
+{
+    <p><b>Възрастов рейтинг:</b> @ViewBag.Game.ContentRating.System @ViewBag.Game.ContentRating.AgeLevel +</p>
+}
+
+@if (@ViewBag.Game.Requirements != null && @ViewBag.Game.Requirements.Count > 0)
+{
+
+    @foreach (var item in @ViewBag.Game.Requirements)
+    {
+        @if (@item.RequirementsType == "минимални")
+        {
+            <p><b>Минимални изисквания:</b></p>
+        }
+        else if (@item.RequirementsType == "препоръчителни")
+        {
+            <p><b>Препоръчителни изисквания:</b></p>
+        }
+        else
+        {
+            <p><b>@item.RequirementsType изисквания:</b></p>
+        }
+        <ul style="list-style-type:disc">
+            <li><p><b>Операционна система:</b> @item.OperatingSystem</p></li>
+            <li><p><b>РАМ памет:</b> @item.Ram</p></li>
+            <li><p><b>Процесор:</b> @item.Cpu</p></li>
+            <li><p><b>Видео карта:</b> @item.Graphics</p></li>
+            <li><p><b>Версия на DirectX:</b> @item.DirectX</p></li>
+            @if (item.InternetNeed == true)
+            {
+                <li><p><b>Интернет връзка:</b> да</p></li>
+            }
+            else
+            {
+                <li><p><b>Интернет връзка:</b> не</p></li>
+            }
+            <li><p><b>Свободно място:</b> @item.Storage</p></li>
+        </ul>
+    }
+}
+
+
